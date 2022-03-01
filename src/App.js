@@ -20,6 +20,10 @@ const ScrollToTop = () => {
   return null
 }
 
+const setLocalStorage = (darkModeActive) => {
+  localStorage.setItem('darkMode', darkModeActive)
+}
+
 function App() {
   const [darkMode, setDarkMode] = useState(true)
 
@@ -28,6 +32,14 @@ function App() {
       mode: darkMode ? 'dark' : 'light',
     },
   })
+
+  useEffect(() => {
+    const darkModeActive = localStorage.getItem('darkMode')
+    if (darkModeActive !== null) {
+      console.log('darkModeActive is : ' + darkModeActive)
+      setDarkMode(JSON.parse(darkModeActive))
+    }
+  }, [darkMode])
 
   return (
     <ThemeProvider theme={theme}>
@@ -43,6 +55,7 @@ function App() {
           }}
           onClick={() => {
             setDarkMode(!darkMode)
+            setLocalStorage(!darkMode)
           }}>
           {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
         </IconButton>
