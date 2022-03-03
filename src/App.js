@@ -10,6 +10,10 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 
 import Home from './routes/home'
+import Games from './routes/games'
+import AboutMe from './routes/aboutMe'
+import Contact from './routes/contact'
+import Projects from './routes/projects'
 
 const ScrollToTop = () => {
   const { pathname } = useLocation()
@@ -62,9 +66,11 @@ function App() {
         <ScrollToTop />
         <Paper style={{ height: '100vh' }}>
           <Routes>
-            {/* <Route path="/privacypolicy" component={PrivacyPolicy} />
-          <Route path="/termsofservice" component={TermsOfService} /> */}
-            <Route exact path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="about" element={<AboutMe />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="games" element={<Games />} />
+            <Route path="projects" element={<Projects />} />
           </Routes>
           <Footer />
         </Paper>

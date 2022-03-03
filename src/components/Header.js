@@ -13,6 +13,7 @@ import {
   ListItemText,
 } from '@mui/material'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export const HeaderComponent = () => {
   const [mobileView, setMobileView] = useState(false)
@@ -54,35 +55,35 @@ export const HeaderComponent = () => {
                 onClose: handleDrawerClose,
               }}>
               <List>
-                <ListItemButton component="a" href="/" onClick={toggleDrawer}>
+                <ListItemButton component={Link} to={''} onClick={toggleDrawer}>
                   <IconButton onClick={toggleDrawer}>
                     <Home />
                   </IconButton>
                   <ListItemText primary="Home" />
                 </ListItemButton>
 
-                <ListItemButton component="a" href="/projects" onClick={toggleDrawer}>
+                <ListItemButton component={Link} to={'projects'} onClick={toggleDrawer}>
                   <IconButton onClick={toggleDrawer}>
                     <Api />
                   </IconButton>
                   <ListItemText primary="Projects" />
                 </ListItemButton>
 
-                <ListItemButton component="a" href="/games" onClick={toggleDrawer}>
+                <ListItemButton component={Link} to={'games'} onClick={toggleDrawer}>
                   <IconButton onClick={toggleDrawer}>
                     <VideogameAsset />
                   </IconButton>
                   <ListItemText primary="Games" />
                 </ListItemButton>
 
-                <ListItemButton component="a" href="/about" onClick={toggleDrawer}>
+                <ListItemButton component={Link} to={'about'} onClick={toggleDrawer}>
                   <IconButton onClick={toggleDrawer}>
                     <Face />
                   </IconButton>
                   <ListItemText primary="About Me" />
                 </ListItemButton>
 
-                <ListItemButton component="a" href="/contact" onClick={toggleDrawer}>
+                <ListItemButton component={Link} to={'contact'} onClick={toggleDrawer}>
                   <IconButton onClick={toggleDrawer}>
                     <ContactPage />
                   </IconButton>
@@ -103,11 +104,29 @@ const displayDesktop = () => {
   return (
     <Toolbar style={{ justifyContent: 'space-around' }}>
       <BottomNavigation showLabels style={{ background: 'transparent' }}>
-        <BottomNavigationAction label="Home" icon={<Home />} />
-        <BottomNavigationAction label="Projects" icon={<Api />} style={{ margin: '0 10px' }} />
-        <BottomNavigationAction label="Games" icon={<VideogameAsset />} style={{ margin: '0 10px' }} />
-        <BottomNavigationAction label="About Me" icon={<Face />} style={{ margin: '0 10px' }} />
-        <BottomNavigationAction label="Contact" icon={<ContactPage />} />
+        <BottomNavigationAction component={Link} to={'/'} label="Home" icon={<Home />} />
+        <BottomNavigationAction
+          component={Link}
+          to={'projects'}
+          label="Projects"
+          icon={<Api />}
+          style={{ margin: '0 10px' }}
+        />
+        <BottomNavigationAction
+          component={Link}
+          to={'games'}
+          label="Games"
+          icon={<VideogameAsset />}
+          style={{ margin: '0 10px' }}
+        />
+        <BottomNavigationAction
+          component={Link}
+          to={'about'}
+          label="About Me"
+          icon={<Face />}
+          style={{ margin: '0 10px' }}
+        />
+        <BottomNavigationAction component={Link} to={'contact'} label="Contact" icon={<ContactPage />} />
       </BottomNavigation>
     </Toolbar>
   )
