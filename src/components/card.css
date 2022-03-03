@@ -1,0 +1,25 @@
+.MuiCard-root {
+  background-color: unset !important;
+}
+
+.description {
+  height: 100px;
+  overflow: scroll;
+  cursor: all-scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.description::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.description {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}

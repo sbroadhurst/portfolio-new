@@ -14,6 +14,7 @@ import Games from './routes/games'
 import AboutMe from './routes/aboutMe'
 import Contact from './routes/contact'
 import Projects from './routes/projects'
+import AssetProvider from './contexts/assetContext'
 
 const ScrollToTop = () => {
   const { pathname } = useLocation()
@@ -48,32 +49,38 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <HashRouter>
-        <Header />
-        <IconButton
-          sx={{
-            m: 1,
-            position: 'absolute',
-            right: 0,
-            top: 0,
-            color: theme.palette.mode === 'light' ? 'black' : 'white',
-          }}
-          onClick={() => {
-            setDarkMode(!darkMode)
-            setLocalStorage(!darkMode)
-          }}>
-          {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-        </IconButton>
-        <ScrollToTop />
-        <Paper style={{ height: '100vh' }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="about" element={<AboutMe />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="games" element={<Games />} />
-            <Route path="projects" element={<Projects />} />
-          </Routes>
-          <Footer />
-        </Paper>
+        <AssetProvider>
+          <Header />
+          <IconButton
+            sx={{
+              m: 1,
+              position: 'absolute',
+              right: 0,
+              top: 0,
+              color: theme.palette.mode === 'light' ? 'black' : 'white',
+            }}
+            onClick={() => {
+              setDarkMode(!darkMode)
+              setLocalStorage(!darkMode)
+            }}>
+            {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
+          <ScrollToTop />
+          <Paper
+            style={{
+              paddingBottom: 50,
+              borderRadius: 0,
+            }}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="about" element={<AboutMe />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="games" element={<Games />} />
+              <Route path="projects" element={<Projects />} />
+            </Routes>
+            <Footer />
+          </Paper>
+        </AssetProvider>
       </HashRouter>
     </ThemeProvider>
   )
