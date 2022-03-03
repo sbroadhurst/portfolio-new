@@ -70,6 +70,7 @@ function App() {
             style={{
               paddingBottom: 50,
               borderRadius: 0,
+              height: '100vh',
             }}>
             <Routes>
               <Route path="/" element={<Home />} />
