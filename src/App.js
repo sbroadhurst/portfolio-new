@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import './App.css'
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { createTheme, IconButton, ThemeProvider } from '@mui/material'
-import { Paper } from '@mui/material'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
+import { CssBaseline } from '@mui/material'
 
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -48,6 +48,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <HashRouter>
         <AssetProvider>
           <Header />
@@ -66,12 +67,7 @@ function App() {
             {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
           </IconButton>
           <ScrollToTop />
-          <Paper
-            style={{
-              paddingBottom: 50,
-              borderRadius: 0,
-              height: '100vh',
-            }}>
+          <div style={{ marginBottom: 60 }}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="about" element={<AboutMe />} />
@@ -79,8 +75,8 @@ function App() {
               <Route path="games" element={<Games />} />
               <Route path="projects" element={<Projects />} />
             </Routes>
-            <Footer />
-          </Paper>
+          </div>
+          <Footer />
         </AssetProvider>
       </HashRouter>
     </ThemeProvider>

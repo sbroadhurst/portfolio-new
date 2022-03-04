@@ -1,19 +1,18 @@
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
-// import Typography from '@mui/material/Typography'
-import { Api, ContactPage, Face, Home, VideogameAsset, Menu } from '@mui/icons-material'
-import {
-  BottomNavigation,
-  BottomNavigationAction,
-  Drawer,
-  IconButton,
-  List,
-  ListItemButton,
-  ListItemText,
-} from '@mui/material'
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Api, ContactPage, Face, Home, VideogameAsset, Menu } from '@mui/icons-material'
+import { BottomNavigation, Drawer, IconButton, List, ListItemButton, ListItemText } from '@mui/material'
+import { useEffect, useState } from 'react'
+import { BottomNavAction } from './styledComponents'
+
+// const checkActiveRoute = (linkAddress) => {
+//   const href = window.location.href
+//   console.log(href.includes(linkAddress))
+
+//   return href.includes(linkAddress)
+// }
 
 export const HeaderComponent = () => {
   const [mobileView, setMobileView] = useState(false)
@@ -104,29 +103,11 @@ const displayDesktop = () => {
   return (
     <Toolbar style={{ justifyContent: 'space-around' }}>
       <BottomNavigation showLabels style={{ background: 'transparent' }}>
-        <BottomNavigationAction component={Link} to={'/'} label="Home" icon={<Home />} />
-        <BottomNavigationAction
-          component={Link}
-          to={'projects'}
-          label="Projects"
-          icon={<Api />}
-          style={{ margin: '0 10px' }}
-        />
-        <BottomNavigationAction
-          component={Link}
-          to={'games'}
-          label="Games"
-          icon={<VideogameAsset />}
-          style={{ margin: '0 10px' }}
-        />
-        <BottomNavigationAction
-          component={Link}
-          to={'about'}
-          label="About Me"
-          icon={<Face />}
-          style={{ margin: '0 10px' }}
-        />
-        <BottomNavigationAction component={Link} to={'contact'} label="Contact" icon={<ContactPage />} />
+        <BottomNavAction component={Link} to={'/'} label="Home" icon={<Home />} />
+        <BottomNavAction component={Link} to={'projects'} label="Projects" icon={<Api />} />
+        <BottomNavAction component={Link} to={'games'} label="Games" icon={<VideogameAsset />} />
+        <BottomNavAction component={Link} to={'about'} label="About Me" icon={<Face />} />
+        <BottomNavAction component={Link} to={'contact'} label="Contact" icon={<ContactPage />} />
       </BottomNavigation>
     </Toolbar>
   )

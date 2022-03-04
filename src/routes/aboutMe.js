@@ -1,7 +1,8 @@
 import React from 'react'
+import Title from '../components/Title'
 
 const AboutMe = () => {
-  return <div>aboutMe</div>
+  return <Title title="About Me" />
 }
 
 export default AboutMe

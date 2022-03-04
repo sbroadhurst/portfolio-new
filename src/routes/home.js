@@ -1,5 +1,11 @@
+import Title from '../components/Title'
+
 const Home = () => {
-  return <div> home page </div>
+  return (
+    <div>
+      <Title title="Stephen Broadhurst" />{' '}
+    </div>
+  )
 }
 
 export default Home
