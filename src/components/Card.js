@@ -9,6 +9,7 @@ import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import { GitHub, OpenInBrowser } from '@mui/icons-material'
 import './card.css'
+import { Link } from 'react-router-dom'
 
 const CustomCard = (props) => {
   const { cardData } = props
@@ -27,22 +28,31 @@ const CustomCard = (props) => {
         <Typography className="description">{cardData.description}</Typography>
       </CardContent>
       <CardActions disableSpacing className="flex-end">
-        <IconButton
-          component="a"
-          href={cardData.gitHubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Visit on GitHub">
-          <GitHub />
-        </IconButton>
-        <IconButton
-          component="a"
-          href={cardData.websiteUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Open In New Tab">
-          <OpenInBrowser />
-        </IconButton>
+        {/* only show github button if there is a github url */}
+        {cardData.gitHubUrl ? (
+          <IconButton
+            component="a"
+            href={cardData.gitHubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit on GitHub">
+            <GitHub />
+          </IconButton>
+        ) : null}
+        {cardData.internal ? (
+          <IconButton component={Link} to={cardData.websiteUrl} aria-label="Open">
+            <OpenInBrowser />
+          </IconButton>
+        ) : (
+          <IconButton
+            component="a"
+            href={cardData.websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open In New Tab">
+            <OpenInBrowser />
+          </IconButton>
+        )}
       </CardActions>
     </Card>
   )

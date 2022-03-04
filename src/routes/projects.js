@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import CustomCard from '../components/Card'
+import { CardRow } from '../components/styledComponents'
 import Title from '../components/Title'
 import { AssetContext } from '../contexts/assetContext'
 
@@ -10,7 +11,7 @@ const Projects = () => {
   return (
     <div>
       <Title title="Projects" />
-      <div style={{ display: 'flex', width: '100%', flexWrap: 'wrap', justifyContent: 'center' }}>
+      <CardRow>
         {projects.map((project) => {
           return (
             <div style={{ margin: 25 }} key={project.name}>
@@ -18,7 +19,7 @@ const Projects = () => {
             </div>
           )
         })}
-      </div>
+      </CardRow>
     </div>
   )
 }

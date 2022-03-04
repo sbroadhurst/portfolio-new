@@ -5,6 +5,10 @@ import Snake from '../assets/snake-game.png'
 import Pokemon from '../assets/proj-pokemon.png'
 import Marvel from '../assets/proj-marvel.png'
 import Movies from '../assets/proj-movie.png'
+import Projects from '../assets/projects.jpeg'
+import Games from '../assets/games.jpeg'
+import About from '../assets/about.jpeg'
+import Contact from '../assets/contact.jpeg'
 
 export const AssetContext = createContext({})
 
@@ -66,6 +70,40 @@ const AssetProvider = ({ children }) => {
         gitHubUrl: 'https://github.com/sbroadhurst/pokemon',
         description:
           'Search for pokemon cards and view the information on them including the attacks, name, HP and legality of the card. You can search fast by the pokemon name, or do an advanced search that will allow you to add specific fields, such as type and legality.',
+      },
+    ],
+    homePageCards: [
+      {
+        name: 'Projects',
+        subtitle: 'View My Projects',
+        image: Projects,
+        description: 'Click the image or button for more information on my personal projects',
+        websiteUrl: '/projects',
+        internal: true,
+      },
+      {
+        name: 'Games',
+        subtitle: 'View My Games',
+        image: Games,
+        description: 'Click the image or button for more information on my personal game projects',
+        websiteUrl: '/games',
+        internal: true,
+      },
+      {
+        name: 'About Me',
+        subtitle: 'Learn About Me & Résumé',
+        image: About,
+        description: 'Click the image or button for more information about me and view my résumé',
+        websiteUrl: '/about',
+        internal: true,
+      },
+      {
+        name: 'Contact',
+        subtitle: 'My Contact Info',
+        image: Contact,
+        description: 'Click the image or button for my contact information',
+        websiteUrl: '/contact',
+        internal: true,
       },
     ],
   }

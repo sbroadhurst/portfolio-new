@@ -12,3 +12,10 @@ export const BottomNavAction = styled(BottomNavigationAction)(({ linkAddress }) 
     backgroundSize: '0 3px, 100% 3px',
   },
 }))
+
+export const CardRow = styled('div')({
+  display: 'flex',
+  width: '100%',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+})
