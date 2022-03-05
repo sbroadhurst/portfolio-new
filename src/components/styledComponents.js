@@ -1,4 +1,4 @@
-import { BottomNavigationAction } from '@mui/material'
+import { BottomNavigationAction, Box } from '@mui/material'
 import { styled } from '@mui/system'
 
 export const BottomNavAction = styled(BottomNavigationAction)(({ linkAddress }) => ({
@@ -26,4 +26,10 @@ export const ContentCenter = styled('div')({
   align: 'center',
   marginLeft: '2.5%',
   marginRight: '2.5%',
+})
+
+export const IconTextBox = styled(Box)({
+  display: 'flex',
+  alignItems: 'flex-end',
+  marginBottom: '15px',
 })
