@@ -17,7 +17,7 @@ const CustomCard = (props) => {
   return (
     <Card sx={{ maxWidth: 345, boxShadow: 10 }}>
       <CardHeader
-        avatar={<Avatar aria-label="recipe" src={cardData.image}></Avatar>}
+        avatar={<Avatar aria-label="avatar" src={cardData.image}></Avatar>}
         title={cardData.name}
         subheader={cardData.subtitle}
       />
