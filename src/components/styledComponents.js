@@ -19,3 +19,11 @@ export const CardRow = styled('div')({
   flexWrap: 'wrap',
   justifyContent: 'center',
 })
+
+export const ContentCenter = styled('div')({
+  display: 'flex',
+  justifyContent: 'center',
+  align: 'center',
+  marginLeft: '2.5%',
+  marginRight: '2.5%',
+})
