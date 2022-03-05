@@ -21,7 +21,7 @@ const AboutMe = () => {
     <div>
       <Title title="About Me" />
       <ContentCenter>
-        <Card sx={{ width: '95vw', maxWidth: 1440 }}>
+        <Card sx={{ boxShadow: 10 }}>
           <Box sx={{ maxWidth: { xs: 320, sm: '100%' }, display: 'flex', justifyContent: 'center' }}>
             <Tabs
               value={value}
