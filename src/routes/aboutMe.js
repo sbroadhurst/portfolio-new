@@ -21,8 +21,8 @@ const AboutMe = () => {
     <div>
       <Title title="About Me" />
       <ContentCenter>
-        <Card sx={{ boxShadow: 10 }}>
-          <Box sx={{ maxWidth: { xs: 320, sm: '100%' }, display: 'flex', justifyContent: 'center' }}>
+        <Card sx={{ boxShadow: 10, width: '95%', maxWidth: 1440 }}>
+          <Box sx={{ maxWidth: { xs: 590, sm: '100%' }, display: 'flex', justifyContent: 'center' }}>
             <Tabs
               value={value}
               onChange={handleChange}
