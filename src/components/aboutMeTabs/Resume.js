@@ -8,7 +8,7 @@ const Resume = () => {
     <div id="resume">
       <Accordion style={{ border: '1px solid #01579b' }}>
         <AccordionSummary
-          style={{ backgroundColor: '#01579b' }}
+          style={{ backgroundColor: '#01579b', justifyContent: 'center', alignItems: 'center' }}
           expandIcon={<ExpandMore />}
           aria-controls="panel1a-content"
           id="panel1a-header">
