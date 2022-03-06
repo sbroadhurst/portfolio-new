@@ -33,3 +33,15 @@ export const IconTextBox = styled(Box)({
   alignItems: 'flex-end',
   marginBottom: '15px',
 })
+
+export const DeviIcon = styled('i')({
+  fontSize: 60,
+  display: 'flex',
+  alignItems: 'center',
+  margin: 15,
+})
+
+export const Break = styled('div')({
+  flexBasis: '100%',
+  height: 0,
+})
