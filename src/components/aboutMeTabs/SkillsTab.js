@@ -24,6 +24,9 @@ const SkillsTab = () => {
         <DeviIcon className="devicon-css3-plain">
           <Typography>&ensp;CSS : 5 Years</Typography>
         </DeviIcon>
+        <DeviIcon className="devicon-materialui-plain">
+          <Typography>&ensp;Material UI : 5 Years</Typography>
+        </DeviIcon>
         <DeviIcon className="devicon-npm-original-wordmark">
           <Typography>&ensp;NPM : 5 Years</Typography>
         </DeviIcon>
