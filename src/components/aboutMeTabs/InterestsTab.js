@@ -1,4 +1,4 @@
-import { AirplaneTicket, Movie, School, SportsEsports } from '@mui/icons-material'
+import { AirplaneTicket, Fastfood, Movie, School, SportsEsports } from '@mui/icons-material'
 import { Typography } from '@mui/material'
 import React from 'react'
 import { AmazonIcon, AnimeIcon, BoardGameIcon, HuluIcon, NetflixIcon } from '../../assets/customSvgs'
@@ -16,6 +16,9 @@ const InterestsTab = () => {
         </DeviIcon>
         <DeviIcon>
           <AirplaneTicket sx={{ fontSize: 60 }} /> <Typography>&ensp;Travel</Typography>
+        </DeviIcon>
+        <DeviIcon>
+          <Fastfood sx={{ fontSize: 50 }} /> <Typography>&ensp;Food</Typography>
         </DeviIcon>
         <DeviIcon>
           <NetflixIcon sx={{ fontSize: 40 }} /> <Typography>&ensp;Netflix</Typography>
