@@ -1,4 +1,4 @@
-import { BottomNavigationAction, Box } from '@mui/material'
+import { BottomNavigationAction, Box, Card } from '@mui/material'
 import { styled } from '@mui/system'
 
 export const BottomNavAction = styled(BottomNavigationAction)(({ linkAddress }) => ({
@@ -44,4 +44,10 @@ export const DeviIcon = styled('i')({
 export const Break = styled('div')({
   flexBasis: '100%',
   height: 0,
+})
+
+export const SpecialAbilitiesCard = styled(Card)({
+  width: '70%',
+  maxWidth: 500,
+  margin: 25,
 })
