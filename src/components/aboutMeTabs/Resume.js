@@ -15,8 +15,8 @@ const Resume = () => {
           <Typography>
             View Resume or{' '}
             <a
-              style={{ textDecoration: 'none' }}
-              href="https://drive.google.com/file/d/1_SFZvQuSzEWr9gFm1XLTCbkYiwXDAK45/view?usp=sharing"
+              style={{ textDecoration: 'none', color: 'blue' }}
+              href="https://drive.google.com/file/d/1CkXvmfShC8o2BLGE6DOf7okeYrAgwcvz/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer">
               Click Here{' '}

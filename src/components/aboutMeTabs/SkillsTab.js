@@ -31,7 +31,7 @@ const SkillsTab = () => {
           <Typography>&ensp;NPM : 5 Years</Typography>
         </DeviIcon>
         <DeviIcon className="devicon-angularjs-plain">
-          <Typography>&ensp;Angular : 1 Year</Typography>
+          <Typography>&ensp;Angular : 2 Years</Typography>
         </DeviIcon>
         <DeviIcon className="devicon-typescript-plain">
           <Typography>&ensp;TypeScript: 4 Years</Typography>
@@ -49,7 +49,7 @@ const SkillsTab = () => {
           <Typography>&ensp;MongoDB : 3 Years</Typography>
         </DeviIcon>
         <DeviIcon className="devicon-slack-plain">
-          <Typography>&ensp;Slack: 1 Year</Typography>
+          <Typography>&ensp;Slack: 2 Years</Typography>
         </DeviIcon>
         <DeviIcon className="devicon-vscode-plain">
           <Typography>&ensp;VS Code: 5 Years</Typography>
@@ -88,6 +88,9 @@ const SkillsTab = () => {
         </DeviIcon>
         <DeviIcon className="devicon-storybook-plain">
           <Typography>&ensp;Storybook</Typography>
+        </DeviIcon>
+        <DeviIcon className="devicon-angularjs-plain">
+          <Typography>&ensp;AngularJS</Typography>
         </DeviIcon>
       </CardRow>
     </div>
